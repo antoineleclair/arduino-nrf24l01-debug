@@ -29,6 +29,8 @@ Then, you can use it to send debug info to Serial.
     nrf24l01Registers(rf); // sends all the registers to Serial
     nrf24l01Registers(rf, CONFIG); // sends this register to Serial, with details
 
+Output
+------
 
 `nrf24l01Registers(rf)` will send something like this:
 
