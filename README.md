@@ -10,24 +10,28 @@ How to use
 
 Clone the repository somewhere in your home folder, then make a symlink of the source folder in arduino libraries folder. For example, in Ubuntu 13.04:
 
-    git clone git@github.com:antoineleclair/arduino-nrf24l01-debug.git
-    sudo ln -s arduino-nrf24l01-debug/src /usr/share/arduino/libraries/nrf24l01Debug
+```bash
+git clone git@github.com:antoineleclair/arduino-nrf24l01-debug.git
+sudo ln -s arduino-nrf24l01-debug/src /usr/share/arduino/libraries/nrf24l01Debug
+```
 
 Then, you can use it to send debug info to Serial.
 
-    #include <nrf24l01-mnemonics.h>
-    #include <nrf24l01.h>
-    #include <nrf24l01-debug.h>
+```c++
+#include <nrf24l01-mnemonics.h>
+#include <nrf24l01.h>
+#include <nrf24l01-debug.h>
 
-    // ...
+// ...
 
-    nRF24L01 rf = nRF24L01(SLAVE_SELECT_PIN, CHIP_ENABLE_PIN);
-    Serial.begin(9600);
+nRF24L01 rf = nRF24L01(SLAVE_SELECT_PIN, CHIP_ENABLE_PIN);
+Serial.begin(9600);
 
-    // ...
+// ...
 
-    nrf24l01Registers(rf); // sends all the registers to Serial
-    nrf24l01Registers(rf, CONFIG); // sends this register to Serial, with details
+nrf24l01Registers(rf); // sends all the registers to Serial
+nrf24l01Registers(rf, CONFIG); // sends this register to Serial, with details
+```
 
 Output
 ------
