@@ -5,5 +5,6 @@
 #include <nrf24l01.h>
 
 void nrf24l01Registers(nRF24L01 rf);
+void nrf24l01Registers(nRF24L01 rf, uint8_t registerAddress);
 
 #endif

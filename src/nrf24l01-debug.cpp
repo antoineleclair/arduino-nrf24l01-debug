@@ -1,32 +1,32 @@
 #include "nrf24l01-debug.h"
 #include <Arduino.h>
 
-void nrf24l01Register_CONFIG(nRF24L01 rf, bool details=true);
-void nrf24l01Register_EN_AA(nRF24L01 rf, bool details = true);
-void nrf24l01Register_EN_RXADDR(nRF24L01 rf, bool details = true);
-void nrf24l01Register_SETUP_AW(nRF24L01 rf, bool details = true);
-void nrf24l01Register_SETUP_RETR(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RF_CH(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RF_SETUP(nRF24L01 rf, bool details = true);
-void nrf24l01Register_STATUS(nRF24L01 rf, bool details = true);
-void nrf24l01Register_OBSERVE_TX(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RPD(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_ADDR_P0(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_ADDR_P1(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_ADDR_P2(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_ADDR_P3(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_ADDR_P4(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_ADDR_P5(nRF24L01 rf, bool details = true);
-void nrf24l01Register_TX_ADDR(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_PW_P0(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_PW_P1(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_PW_P2(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_PW_P3(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_PW_P4(nRF24L01 rf, bool details = true);
-void nrf24l01Register_RX_PW_P5(nRF24L01 rf, bool details = true);
-void nrf24l01Register_FIFO_STATUS(nRF24L01 rf, bool details = true);
-void nrf24l01Register_DYNPD(nRF24L01 rf, bool details = true);
-void nrf24l01Register_FEATURE(nRF24L01 rf, bool details = true);
+void nrf24l01Register_CONFIG(nRF24L01 rf, bool details = false);
+void nrf24l01Register_EN_AA(nRF24L01 rf, bool details = false);
+void nrf24l01Register_EN_RXADDR(nRF24L01 rf, bool details = false);
+void nrf24l01Register_SETUP_AW(nRF24L01 rf, bool details = false);
+void nrf24l01Register_SETUP_RETR(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RF_CH(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RF_SETUP(nRF24L01 rf, bool details = false);
+void nrf24l01Register_STATUS(nRF24L01 rf, bool details = false);
+void nrf24l01Register_OBSERVE_TX(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RPD(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_ADDR_P0(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_ADDR_P1(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_ADDR_P2(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_ADDR_P3(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_ADDR_P4(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_ADDR_P5(nRF24L01 rf, bool details = false);
+void nrf24l01Register_TX_ADDR(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_PW_P0(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_PW_P1(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_PW_P2(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_PW_P3(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_PW_P4(nRF24L01 rf, bool details = false);
+void nrf24l01Register_RX_PW_P5(nRF24L01 rf, bool details = false);
+void nrf24l01Register_FIFO_STATUS(nRF24L01 rf, bool details = false);
+void nrf24l01Register_DYNPD(nRF24L01 rf, bool details = false);
+void nrf24l01Register_FEATURE(nRF24L01 rf, bool details = false);
 
 void nrf24l01Registers(nRF24L01 rf) {
     nrf24l01Register_CONFIG(rf);
