@@ -29,6 +29,8 @@ void nrf24l01Register_DYNPD(nRF24L01 rf, bool details = false);
 void nrf24l01Register_FEATURE(nRF24L01 rf, bool details = false);
 
 void nrf24l01Registers(nRF24L01 rf) {
+    Serial.println("nRF24L01+ registers");
+    Serial.println("===================");
     nrf24l01Register_CONFIG(rf);
     nrf24l01Register_EN_AA(rf);
     nrf24l01Register_EN_RXADDR(rf);
@@ -154,12 +156,12 @@ void printBits(const char *name, uint8_t data, uint8_t mask) {
     bool printed = false;
     for (int i = 7; i >= 0; i--) {
         uint8_t bitmask = 1 << i;
-        if (bitmask ^ mask) continue;
-        printed = true;
+        if (!(bitmask & mask)) continue;
         uint8_t value = data & bitmask & mask;
         if (i == 3 && printed) Serial.print(" ");
         if (value) Serial.print("1");
         else Serial.print("0");
+        printed = true;
     }
     Serial.print("\n");
 }
@@ -170,13 +172,12 @@ void printByte(const char *name, uint8_t data) {
 
 void printBit(const char *name, uint8_t data, int bitNumber) {
     Serial.println(name);
-    Serial.println((data & bitNumber) >> bitNumber);
+    Serial.println((data & (1 << bitNumber)) >> bitNumber);
 }
 
 void nrf24l01Register_CONFIG(nRF24L01 rf, bool details) {
     uint8_t data = readRegister(rf, CONFIG);
     printByte("CONFIG", data);
-
     if (!details) return;
 
     printBit("MASK_RX_DR", data, MASK_RX_DR);
